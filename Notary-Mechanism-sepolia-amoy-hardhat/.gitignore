@@ -1,0 +1,24 @@
+# Node modules
+node_modules/
+
+# Hardhat files
+cache/
+artifacts/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Debugger working directories
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# npm
+#package-lock.json
