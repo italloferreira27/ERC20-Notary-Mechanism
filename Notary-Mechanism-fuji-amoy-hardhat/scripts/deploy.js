@@ -2,7 +2,7 @@ require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-ethers");
 require("dotenv").config();
 
-const {ARBITRUM_PRIVATE_KEY01, ARBITRUM_PRIVATE_KEY02, ARBITRUM_PRIVATE_KEY03, AMOY_PRIVATE_KEY01, AMOY_PRIVATE_KEY02,AMOY_PRIVATE_KEY03} = process.env;
+const {AVALANCHE_PRIVATE_KEY01, AVALANCHE_PRIVATE_KEY02, AVALANCHE_PRIVATE_KEY03, AMOY_PRIVATE_KEY01, AMOY_PRIVATE_KEY02,AMOY_PRIVATE_KEY03} = process.env;
 
 async function main() {
     const networkName = hre.network.name;
@@ -11,12 +11,12 @@ async function main() {
     let holders;
     console.log(`Network: ${networkName} | ChainId: (${chainIdDec})`);
 
-    if(chainIdDec == 421614){
-        console.log("Deploying on ARBITRUM:");
+    if(chainIdDec == 43113){
+        console.log("Deploying on AVALANCHE:");
         holders = [
-            new ethers.Wallet(ARBITRUM_PRIVATE_KEY01).address,
-            new ethers.Wallet(ARBITRUM_PRIVATE_KEY02).address,
-            new ethers.Wallet(ARBITRUM_PRIVATE_KEY03).address
+            new ethers.Wallet(AVALANCHE_PRIVATE_KEY01).address,
+            new ethers.Wallet(AVALANCHE_PRIVATE_KEY02).address,
+            new ethers.Wallet(AVALANCHE_PRIVATE_KEY03).address
         ];
 
         // console.log(`private keys: ${holders}`);

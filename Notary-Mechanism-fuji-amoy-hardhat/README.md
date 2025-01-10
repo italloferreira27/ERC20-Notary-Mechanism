@@ -31,7 +31,7 @@ npm install
 
 * Inicialmente é preciso fazer os deploys nas duas redes de teste, tanto na amoy quanto na sepolia:
 ```bash
-npx hardhat run scripts/deploy.js --network arbitrum
+npx hardhat run scripts/deploy.js --network avalanche
 npx hardhat run scripts/deploy.js --network amoy
 ```
 
@@ -40,9 +40,13 @@ npx hardhat run scripts/deploy.js --network amoy
 npx hardhat run scripts/stake.js
 ```
 
-* Por fim com o script `transaction.js` fará um deposito na rede sepolia, indicando um endereço da amoy e o stake irá efetuar a operação para esse endereço na rede amoy:
+* Por fim, com o script `transaction.js` será possivél fazer uma transação da rede Fuji para a Amoy utilizando o seguinte comando:
 ```bash
-npx hardhat run scripts/transaction.js
+npx hardhat run scripts/transaction.js --network avalanche
+```
+E para também é possivél fazer uma transação da rede Amoy para a Fuji utilizando o seguinte comando:
+```bash
+npx hardhat run scripts/transaction.js --network amoy
 ```
 
 ## Ferramentas Utilizadas
